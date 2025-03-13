@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy 隱私政策</title>
+    <title>隐私政策 Privacy Policy 隱私政策</title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
             line-height: 1.8;
             max-width: 800px;
             margin: 20px auto;
@@ -20,11 +20,16 @@
         button {
             padding: 8px 15px;
             margin-left: 10px;
-            border: 1px solid #3498db;
+            border: 2px solid #3498db;
             background: white;
             color: #3498db;
             cursor: pointer;
-            border-radius: 4px;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: #3498db;
+            color: white;
         }
         button.active {
             background: #3498db;
@@ -32,22 +37,19 @@
         }
         h1 {
             color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 15px;
         }
         h2 {
             color: #34495e;
             margin-top: 25px;
         }
-        .contact {
-            background-color: #f8f9fa;
+        .contact-block {
+            background: #f8f9fa;
             padding: 20px;
-            border-radius: 5px;
-            margin-top: 30px;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
+            border-radius: 10px;
+            margin: 25px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         .lang-content {
             display: none;
@@ -59,41 +61,38 @@
 </head>
 <body>
     <div class="lang-switch">
-        <button onclick="showLang('en')" class="active">English</button>
-        <button onclick="showLang('zh-CN')" >简体中文</button>
+         <button onclick="showLang('en')"  class="active">English</button>
+        <button onclick="showLang('zh-CN')">简体中文</button>
         <button onclick="showLang('zh-TW')">繁體中文</button>
     </div>
 
-    <!-- English -->
+    <!-- 英文 -->
     <div id="en" class="lang-content active">
         <h1>Privacy Policy</h1>
-        <p><em>Last Updated: October 2023</em></p>
+        <p><em>Last Updated: October 2024</em></p>
 
         <h2>1. Data Collection & Usage</h2>
-        <p>Our app <strong>AI Portrait</strong> uses AI technology to generate official ID photos and portrait images from users' uploaded personal photos. During this process, we collect and process the following data:</p>
+        <p>Our app <strong>Smart ID Photo</strong> uses AI technology to generate official ID photos and portraits from users' uploaded personal photos. We process:</p>
         <ul>
-            <li><strong>Uploaded Photos:</strong> Solely used for generating ID/portrait photos</li>
-            <li><strong>Generated Photos:</strong> Directly returned to users upon completion</li>
+            <li><strong>Uploaded Photos:</strong> Solely for generating ID/portrait photos</li>
+            <li><strong>Generated Photos:</strong> Directly returned to user devices</li>
         </ul>
 
         <h2>2. Data Storage & Deletion</h2>
-        <p>All uploaded and generated photos are temporarily stored during processing.</p>
-        <p>After processing completion, all photos are immediately deleted from our servers. We do not retain any user photos.</p>
+        <p>All photos are temporarily stored in Alibaba Cloud Singapore Data Center (AES-256 encrypted) and automatically deleted from servers within 30 minutes after processing.</p>
 
-        <h2>3. Data Sharing</h2>
-        <p>We do not share users' photos or personal information with any third parties.</p>
+        <h2>3. Facial Data Processing</h2>
+        <ul>
+            <li><strong>Collected Data:</strong> Facial landmarks (no biometric data)</li>
+            <li><strong>Processing Flow:</strong> Upload → Encrypted transfer to Coze Platform (ISO 27001 certified) → AI processing → Return results</li>
+            <li><strong>Data Sharing:</strong> Never shared with third parties except legal requirements</li>
+        </ul>
 
         <h2>4. User Rights</h2>
-        <p>Users have the right to delete their data at any time. For assistance, contact us at:
-            <a href="mailto:759090921@qq.com">759090921@qq.com</a>
-        </p>
+        <p>You have the right to delete data at any time. Contact: <a href="mailto:759090921@qq.com">759090921@qq.com</a></p>
 
-        <h2>5. Policy Updates</h2>
-        <p>We may update this Privacy Policy periodically. Updated versions will be published on this page and notified through in-app messages.</p>
-
-        <div class="contact">
+        <div class="contact-block">
             <h2>Contact Us</h2>
-            <p>For any inquiries, please contact us via:</p>
             <p>Email: <a href="mailto:759090921@qq.com">759090921@qq.com</a></p>
         </div>
     </div>
@@ -101,33 +100,30 @@
     <!-- 简体中文 -->
     <div id="zh-CN" class="lang-content">
         <h1>隐私政策</h1>
-        <p><em>最后更新日期：2023年10月</em></p>
+        <p><em>最后更新日期：2024年10月</em></p>
 
         <h2>1. 数据收集与使用</h2>
         <p>我们的 App <strong>智能证件照</strong> 通过用户上传的生活照片，利用 AI 技术生成证件照和形象照。在此过程中，我们收集并处理以下数据：</p>
         <ul>
-            <li><strong>用户上传的照片：</strong>仅用于生成证件照和形象照，不会用于其他目的</li>
-            <li><strong>生成的照片：</strong>完成后会直接返回给用户</li>
+            <li><strong>用户上传的照片：</strong>仅用于生成证件照和形象照</li>
+            <li><strong>生成的照片：</strong>完成后直接返回用户设备</li>
         </ul>
 
         <h2>2. 数据存储与删除</h2>
-        <p>用户上传的照片和生成的照片仅在处理过程中临时存储。</p>
-        <p>处理完成后，所有照片会立即从服务器删除，我们不会保留任何用户照片。</p>
+        <p>用户上传和生成的照片仅在处理过程中临时存储于阿里云新加坡数据中心（AES-256加密），处理完成后30分钟内自动删除服务器数据。</p>
 
-        <h2>3. 数据共享</h2>
-        <p>我们不会与任何第三方共享用户的照片或个人信息。</p>
+        <h2>3. 面部数据处理</h2>
+        <ul>
+            <li><strong>收集内容：</strong>面部特征点（五官位置、轮廓），不收集生物识别数据</li>
+            <li><strong>处理流程：</strong>用户上传 → 加密传输至Coze平台（ISO 27001认证） → AI处理 → 返回结果</li>
+            <li><strong>数据共享：</strong>不与任何第三方共享，法律要求除外</li>
+        </ul>
 
         <h2>4. 用户权利</h2>
-        <p>用户有权随时删除自己的数据。如需帮助，请联系我们：
-            <a href="mailto:759090921@qq.com">759090921@qq.com</a>
-        </p>
+        <p>您有权随时删除数据，请联系：<a href="mailto:759090921@qq.com">759090921@qq.com</a></p>
 
-        <h2>5. 隐私政策更新</h2>
-        <p>我们可能会不定期更新本隐私政策。更新后的政策将发布在本页面，并通过 App 内通知用户。</p>
-
-        <div class="contact">
+        <div class="contact-block">
             <h2>联系我们</h2>
-            <p>如有任何疑问，请通过以下方式联系我们：</p>
             <p>邮箱：<a href="mailto:759090921@qq.com">759090921@qq.com</a></p>
         </div>
     </div>
@@ -135,33 +131,30 @@
     <!-- 繁体中文 -->
     <div id="zh-TW" class="lang-content">
         <h1>隱私政策</h1>
-        <p><em>最後更新日期：2023年10月</em></p>
+        <p><em>最後更新日期：2024年10月</em></p>
 
         <h2>1. 資料收集與使用</h2>
         <p>我們的 App <strong>智能證件照</strong> 通過用戶上傳的生活照片，利用 AI 技術生成證件照和形象照。在此過程中，我們收集並處理以下資料：</p>
         <ul>
-            <li><strong>用戶上傳的照片：</strong>僅用於生成證件照和形象照，不會用於其他目的</li>
-            <li><strong>生成的照片：</strong>完成後會直接返回給用戶</li>
+            <li><strong>用戶上傳的照片：</strong>僅用於生成證件照和形象照</li>
+            <li><strong>生成的照片：</strong>完成後直接返回用戶設備</li>
         </ul>
 
-        <h2>2. 資料存儲與刪除</h2>
-        <p>用戶上傳的照片和生成的照片僅在處理過程中臨時存儲。</p>
-        <p>處理完成後，所有照片會立即從伺服器刪除，我們不會保留任何用戶照片。</p>
+        <h2>2. 資料儲存與刪除</h2>
+        <p>用戶上傳和生成的照片僅在處理過程中臨時儲存於阿里雲新加坡數據中心（AES-256加密），處理完成後30分鐘內自動刪除伺服器資料。</p>
 
-        <h2>3. 資料共享</h2>
-        <p>我們不會與任何第三方共享用戶的照片或個人信息。</p>
+        <h2>3. 面部資料處理</h2>
+        <ul>
+            <li><strong>收集內容：</strong>面部特徵點（五官位置、輪廓），不收集生物識別資料</li>
+            <li><strong>處理流程：</strong>用戶上傳 → 加密傳輸至Coze平台（ISO 27001認證） → AI處理 → 返回結果</li>
+            <li><strong>資料共享：</strong>不與任何第三方共享，法律要求除外</li>
+        </ul>
 
         <h2>4. 用戶權利</h2>
-        <p>用戶有權隨時刪除自己的資料。如需幫助，請聯繫我們：
-            <a href="mailto:759090921@qq.com">759090921@qq.com</a>
-        </p>
+        <p>您有權隨時刪除資料，請聯絡：<a href="mailto:759090921@qq.com">759090921@qq.com</a></p>
 
-        <h2>5. 隱私政策更新</h2>
-        <p>我們可能會不定期更新本隱私政策。更新後的政策將發佈在本頁面，並通過 App 內通知用戶。</p>
-
-        <div class="contact">
-            <h2>聯繫我們</h2>
-            <p>如有任何疑問，請通過以下方式聯繫我們：</p>
+        <div class="contact-block">
+            <h2>聯絡我們</h2>
             <p>郵箱：<a href="mailto:759090921@qq.com">759090921@qq.com</a></p>
         </div>
     </div>
